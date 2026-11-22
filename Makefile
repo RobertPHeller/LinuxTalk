@@ -8,7 +8,7 @@
 #  Author        : $Author$
 #  Created By    : Robert Heller
 #  Created       : Wed Apr 2 14:10:16 2025
-#  Last Modified : <261118.0950>
+#  Last Modified : <261122.1535>
 #
 #  Description	
 #
@@ -78,3 +78,6 @@ TalkNotes.d: ImageDeps.tcl TalkNotes.tex
 
 ClearNailPolish.png: ClearNailPolish.jpeg
 	convert $< $@
+
+Release: all
+	zip LinuxTalkMaterials-`git rev-parse --short HEAD`.zip TalkSlides.pdf TalkNotes.pdf
